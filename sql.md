@@ -314,3 +314,67 @@ alter table table_name auto increment = 100;
 - **Datetime** - format: YYYY-MM-DD HH:MI:SS
 - **Timestamp** - format: YYYY-MM-DD HH:MI:SS
 - **Year** - format YYYY or YY
+
+## Operators LIKE, IN, BETWEEN
+
+- **LIKE** - is used in a WHERE clause to search for a specified pattern in a column.
+
+    ```sql
+    select column1, column2, ...
+    from table_name
+    where column like pattern;
+    ```
+
+- **IN** - allows you to specify multiple values in a WHERE clause.
+
+    ```sql
+    SELECT column_name(s)
+    FROM table_name
+    WHERE column_name IN (value1, value2, ...);
+    ```
+
+    or
+
+    ```sql
+    SELECT column_name(s)
+    FROM table_name
+    WHERE column_name NOT IN (value1, value2, ...);
+
+
+
+## Wildcard Characters
+
+> There are two wildcards used in conjunction with the LIKE operator:
+
+- **%** - The percent sign represents zero, one, or multiple characters.
+
+    The following SQL statement selects all customers with a City starting with "ber":
+
+    ```sql
+    SELECT * FROM Customers
+    WHERE City LIKE 'ber%';
+    ```
+
+    The following SQL statement selects all customers with a City containing the pattern "es": 
+
+    ```sql
+    select * from Customers
+    where City like '%es%';
+    ```
+
+- **_** - The underscore represents a single character.
+
+    Selects all customers with a City starting with any character, followed by "erlin":
+
+    ```sql
+    select * from Customers
+    where City like '_erlin';
+    ```
+
+    Selects all customers with a City starting with "L", followed by any character, followed by "n", followed by any character, followed by "on":
+
+    ```sql
+    select * from Customers
+    where City like 'L_n_on';
+    ```
+    
