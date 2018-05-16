@@ -84,7 +84,6 @@
     create database database_name;
     ```
 
-- **ALTER DATABASE** - modifies a database
 - **CREATE TABLE** - creates a new table
 
     ``` sql
