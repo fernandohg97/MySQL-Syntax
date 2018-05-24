@@ -377,4 +377,29 @@ alter table table_name auto increment = 100;
     select * from Customers
     where City like 'L_n_on';
     ```
+
+## ORDER BY Keyword
+
+> Is used to sort the result-set in ascending or descending order.
+
+```sql
+select * from table_name
+order by column_name1, column_name2, ...;
+```
+
+- **ASC** - to sort the recors in ascending order.
+
+    ```sql
+    select * from table_name
+    order by column_name asc;
+    ```
+
+- **DESC** - sort the recors in descending order.
+
+    ```sql
+    select * from table_name
+    order by column_name desc;
+    ```
+
+
     
