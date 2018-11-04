@@ -126,7 +126,7 @@
 - **CREATE INDEX** - creates an index (search key)
 
     ```sql
-    create INDEX index_name
+    create index index_name
     on table_name (column1, column2, ...);
     ```
 
@@ -400,6 +400,18 @@ order by column_name1, column_name2, ...;
     select * from table_name
     order by column_name desc;
     ```
+
+# JOINS
+
+## What are they?
+
+Joins are an important feature of MySQL databases. In relational databases, we have our tables related to other tables, using the foreign keys.
+
+Most of the time we need to retrieve data from two or more tables that are related.
+
+For example, we have an **order table** and an **order details table**. We need to get data from those two tables that are related with the **foreign key** we assigned. Here, is when it comes **JOINS**.
+
+**JOINS** is a linking data method between two or more tables based on the common columns they have.
 
 
     
